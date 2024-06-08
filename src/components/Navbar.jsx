@@ -1,5 +1,5 @@
 import logo from "../img/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
@@ -17,15 +17,29 @@ const Navbar = () => {
       <nav className="hidden bg-white shadow-md py-4 px-32 sm:flex items-center  justify-between">
         <img src={logo} alt="" />
         <ul className="flex gap-8 md:gap-20 uppercase text-xs  pr-4">
-          <li>
-            <Link to="/">Main</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
+          <NavLink to="/">
+            {({ isActive }) => (
+              <li className={`py-1 ${isActive && "border-y-2 border-black"}`}>
+                Main
+              </li>
+            )}
+          </NavLink>
+          <NavLink to="/gallery">
+            {({ isActive }) => (
+              <li className={`py-1 ${isActive && "border-y-2 border-black"}`}>
+                Gallery
+              </li>
+            )}
+          </NavLink>
+
+          <NavLink to="/projects">
+            {({ isActive }) => (
+              <li className={`py-1 ${isActive && "border-y-2 border-black"}`}>
+                Projects
+              </li>
+            )}
+          </NavLink>
+
           <li>
             <Link to="/">Certifications</Link>
           </li>
