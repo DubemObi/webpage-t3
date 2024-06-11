@@ -8,7 +8,7 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 function Projects() {
   return (
     <>
-      <div className="px-8 sm:px-32 w-full pt-10 sm:pt-12 pb-14">
+      <div className="px-8 sm:px-16 md:px-32 w-full pt-10 sm:pt-12 pb-14">
         <h1 className="text-5xl text-grey-1">
           Our <span className="block font-bold text-black">Projects</span>
         </h1>

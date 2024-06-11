@@ -4,7 +4,7 @@ function SingleProject({ image, title }) {
   return (
     <div className="md:flex w-full gap-10 bg-grey-2">
       <img src={image} alt="" className="md:w-1/2 object-cover" />
-      <div className="pt-6 px-6 pb-8 md:pb-0 md:px-0 md:pr-8">
+      <div className="pt-6 px-6 pb-8 md:pb-6 md:px-0 md:pr-8">
         <h1 className="text-3xl text-grey-1">{title}</h1>
         <p className="mt-6 mb-8 ">
           Lorem Ipsum is simply dummy text of the printing and typesetting

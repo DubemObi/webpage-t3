@@ -14,9 +14,9 @@ import Footer from "./Footer";
 function MainPage() {
   return (
     <>
-      <div className="px-8 sm:px-32 w-full  sm:pt-0 pt-10">
+      <div className="px-8 sm:px-16 md:px-32 w-full  sm:pt-0 pt-10">
         <div className="sm:flex justify-between w-full">
-          <div className=" space-y-6 sm:space-y-14 flex flex-col justify-end pb-6 sm:pb-20">
+          <div className=" space-y-6 sm:space-y-14 flex flex-col justify-end pb-6 md:pb-20">
             <div className="text-center sm:pt-10 md:pt-0 sm:text-left">
               <h1 className="text-5xl uppercase text-grey-1">Project</h1>
               <h1 className="text-5xl font-semibold">Lorum</h1>
@@ -40,17 +40,19 @@ function MainPage() {
           </div>
         </div>
 
-        <div className=" my-20 bg-grey-3 min-h-72 px-6 w-full md:flex justify-end relative">
-          <div className="space-y-4 md:space-y-0 flex items-center gap-4 md:absolute left-14 top-8">
+        <div className=" my-20 bg-grey-3 min-h-72 px-6 w-full sm:flex justify-end relative">
+          <div className="sm:w-1/2 space-y-4 md:space-y-0 flex items-center gap-4 sm:absolute sm:left-8 lg:left-24 top-8 md:top-12 lg:top-8 ">
             <div className="space-y-4 pt-4 md:pt-0">
-              <img src={about1} alt="" className="w-40 lg:w-48" />
-              <img src={about3} alt="" className="w-40 lg:w-48" />
+              <img src={about1} alt="" className="w-40 md:w-44 lg:w-48" />
+              <img src={about3} alt="" className="w-40 md:w-44 lg:w-48" />
             </div>
-            <img src={about2} alt="" className="w-40 lg:w-48" />
+            <div>
+              <img src={about2} alt="" className="w-36 md:w-44 lg:w-48" />
+            </div>
           </div>
-          <div className="md:w-1/2 pt-10 pb-6">
-            <h2 className="text-5xl text-grey-1">About</h2>
-            <p className="my-3 lg:w-4/5 text-sm">
+          <div className="sm:w-1/2 pt-4 md:pt-8 pb-6 sm:pl-12 md:pl-8 lg:pl-6">
+            <h2 className="text-4xl md:text-5xl text-grey-1">About</h2>
+            <p className="my-3 lg:w-4/5 text-xs md:text-sm ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s, when an unknown printer took a galley
@@ -68,17 +70,17 @@ function MainPage() {
           <h1 className="text-5xl text-grey-1 ">
             Main Focus/ Mission Statement
           </h1>
-          <div className="md:flex items-center mt-8 md:mt-4 gap-16 md:px-6 space-y-8 md:space-y-0">
+          <div className="sm:flex items-center mt-8 md:mt-4 gap-16 md:px-6 space-y-8 sm:space-y-0">
             <div className="flex md:items-center md:w-1/2 gap-4">
               <h1 className="text-9xl font-bold text-grey-4">1</h1>
-              <p>
+              <p className="pt-6 md:pt-0">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 efficitur, lectus et facilisis placerat.
               </p>
             </div>
             <div className="flex md:items-center md:w-1/2 gap-4">
               <h1 className="text-9xl font-bold text-grey-4">2</h1>
-              <p>
+              <p className="pt-6 md:pt-0">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 efficitur, lectus et facilisis placerat.
               </p>
@@ -111,21 +113,21 @@ function MainPage() {
                 className="sm:w-1/2 h-54 object-cover"
               />
             </div>
-            <div className="sm:flex items-center justify-between gap-4 space-y-4 sm:space-y-0">
+            <div className="w-full sm:flex items-center justify-between gap-4 space-y-4 sm:space-y-0">
               <img
                 src={project3}
                 alt=""
-                className="w-full h-36 sm:h-44 sm:w-1/4 md:w-1/3 object-cover"
+                className="w-full sm:w-[31%] h-36 sm:h-44 md:w-1/3 object-cover"
               />
               <img
                 src={project4}
                 alt=""
-                className="w-full h-36 sm:h-44 sm:w-1/3 md:w-1/2 object-cover"
+                className="w-full sm:w-1/3 h-36 sm:h-44  md:w-1/2 object-cover"
               />
               <img
                 src={project5}
                 alt=""
-                className="w-full h-36 sm:h-44 sm:w-1/4 md:w-1/3 object-cover"
+                className="w-full sm:w-[31%] h-36 sm:h-44 md:w-1/3 object-cover"
               />
             </div>
           </div>
@@ -138,8 +140,8 @@ function MainPage() {
 
         <div className="w-full mb-14">
           <h1 className="text-5xl text-grey-1 mb-6">Contact Us</h1>
-          <div className="w-full flex items-center gap-6">
-            <div className="w-full md:w-2/5 space-y-4">
+          <div className="w-full flex justify-between  gap-6">
+            <div className="w-full sm:w-3/5 md:w-2/5 lg:w-1/3 space-y-4">
               <input
                 type="text"
                 className="h-12 w-full bg-grey-2 px-6 block placeholder:text-sm"
@@ -168,11 +170,13 @@ function MainPage() {
                 rows={4}
               ></textarea>
             </div>
-            <img
-              src={contactImage}
-              alt=""
-              className="h-80 w-1/2 md:w-full object-cover hidden md:block"
-            />
+            <div className="w-1/2 md:w-3/5 hidden sm:block">
+              <img
+                src={contactImage}
+                alt=""
+                className="h-80 w-full object-cover "
+              />
+            </div>
           </div>
           <div className="mt-4">
             <button className="uppercase bg-black text-white text-xs tracking-widest px-8 py-4 flex items-center gap-2">

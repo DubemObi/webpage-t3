@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       {isOpen && <MobileMenu onHandleMenu={handleMenuOpen} />}
 
-      <nav className="hidden bg-white shadow-md py-4 px-32 sm:flex items-center  justify-between">
+      <nav className="hidden bg-white shadow-md py-4 sm:px-16 md:px-32 sm:flex items-center  justify-between">
         <img src={logo} alt="" />
         <ul className="flex gap-8 md:gap-20 uppercase text-xs  pr-4">
           <NavLink to="/">
